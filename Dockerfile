@@ -1,10 +1,6 @@
 FROM alpine:latest as builder
 MAINTAINER Jason Rivers <docker@jasonrivers.co.uk>
 
-ARG NGINX_VERSION=1.15.3
-ARG NGINX_RTMP_VERSION=1.2.1
-
-
 RUN	apk update		&&	\
 	apk add				\
 		git			\
@@ -40,8 +36,8 @@ RUN	cd /tmp/									&&	\
 	git clone https://github.com/arut/nginx-rtmp-module.git -b v1.2.1
 
 RUN	cd /tmp										&&	\
-	tar xzf nginx-${NGINX_VERSION}.tar.gz						&&	\
-	cd nginx-${NGINX_VERSION}							&&	\
+	tar xzf nginx-1.15.3.tar.gz						&&	\
+	cd nginx-1.15.3							&&	\
 	./configure										\
 		--prefix=/opt/nginx								\
 		--with-http_ssl_module								\
