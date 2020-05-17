@@ -18,7 +18,7 @@ RUN	apk update		&&	\
 		openssl			\
 		pkgconf			\
 		pkgconfig		\
-		mpfr3			\
+		mpfr4			\
 		mpc1			\
 		libstdc++		\
 		ca-certificates		\
